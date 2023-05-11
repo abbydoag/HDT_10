@@ -9,7 +9,7 @@ class MatrixGenerator {
     String[][] adjacencyMatrix = new String[numCities + 1][numCities + 1];
 
     // Agregar nombres de ciudades en la primera columna y primera fila
-    adjacencyMatrix[0][0] = "";
+    adjacencyMatrix[0][0] = "Ciudades";
     for (int i = 1; i <= numCities; i++) {
       adjacencyMatrix[0][i] = cities[i - 1];
       adjacencyMatrix[i][0] = cities[i - 1];
@@ -19,9 +19,9 @@ class MatrixGenerator {
     for (int i = 1; i <= numCities; i++) {
       for (int j = 1; j <= numCities; j++) {
         if (i == j) {
-          adjacencyMatrix[i][j] = "0"; // El peso de viajar a la misma ciudad es 0
+          adjacencyMatrix[i][j] = "0"; //Tenemos que agregar la condicion en la que viajar a un mismo pais pese 0
         }
-        else if ((int) (Math.random() * 100) + 1 < 10 ) {
+        else if ((int) (Math.random() * 100) + 1 < 10 ) { // Para agregar realismo a la simulacion el grafo no estara completamente conectado
             adjacencyMatrix[i][j] = Integer.toString(99999);
 
 
