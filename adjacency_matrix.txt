@@ -1,0 +1,8 @@
+Ciudades NewYork London Paris Tokyo Tamaulipas Guastatoya Bibirlihils 
+NewYork 0 87 99999 58 87 62 37 
+London 73 0 55 85 15 28 30 
+Paris 68 12 0 45 18 40 92 
+Tokyo 78 74 4 0 99999 3 71 
+Tamaulipas 82 3 56 42 0 80 37 
+Guastatoya 79 41 15 75 18 0 19 
+Bibirlihils 65 89 56 88 22 26 0 
