@@ -19,20 +19,22 @@ public class Main {
 	}
 
 	public static void main(String[]args) throws FileNotFoundException{
-        String cities = readData("src/HDT2/datos.txt");
+        String cities = readData("src/HDT_10/logistica.txt");
         String graph = matrixBuilder(cities);
     }
-    private static String matrixBuilder(String cities){
+    private static [][] String matrixBuilder(String cities){
         for (int i=0; i < cities.length(); i++) {
 			char character = cities.charAt(i);
-			if(character == ' ') {
+			if(character==' ') {
 				continue;
 			}
 			if (Character.isDigit(character)){
-				String c = "" + character;
+				String c=""+character;
 				int parsedNumber = Integer.parseInt(c);
 			}
         }
         return cities;
     }
+	Floyd floyd = new Floyd<>();
+	
 }
