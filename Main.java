@@ -19,7 +19,7 @@ public class Main {
 	}
 
 	public static void main(String[]args) throws FileNotFoundException{
-        String cities = readData("src/HDT2/datos.txt");
+        String cities = readData("adjacency_matrix.txt");
         String graph = matrixBuilder(cities);
     }
     private static String matrixBuilder(String cities){

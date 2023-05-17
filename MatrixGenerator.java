@@ -3,7 +3,7 @@ import java.io.IOException;
 
 class MatrixGenerator {
   public static void main(String[] args) {
-    String[] cities = { "NewYork", "London", "Paris", "Tokyo" , "Tamaulipas","Guastatoya","Bibirlihils"};
+    String[] cities = { "NewYork", "London", "Paris", "Tokyo" , "Tamaulipas","Peten","Bibirlihils"};
     int numCities = cities.length;
 
     String[][] adjacencyMatrix = new String[numCities + 1][numCities + 1];
