@@ -1,12 +1,12 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
         Matrix_colector("adjacency_matrix.txt");
-		
 	}
 	public static void Matrix_colector(String ruta) { 
     try {
@@ -30,5 +30,8 @@ public class Main {
         System.out.println("El archivo no existe");
     }
 	Floyd floyd = new Floyd<>();
+
+	System.out.println("TIEMPO DE RUTAS: ");
+	System.out.println("TENGA UN BUEN VIAJE, CONDUZCA CON CUIDADO");
 	}
 }
