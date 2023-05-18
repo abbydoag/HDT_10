@@ -6,9 +6,12 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
-        Matrix_colector("adjacency_matrix.txt");
+        ArrayList<String[]> datos = Matrix_colector("adjacency_matrix.txt");
+        int y = datos.size();
+        int x = 5;
 	}
-	public static void Matrix_colector(String ruta) { 
+
+	public static ArrayList<String []> Matrix_colector(String ruta) { 
     try {
         File archivo = new File(ruta);
         try (Scanner myReader = new Scanner(archivo)) {
@@ -18,20 +21,16 @@ public class Main {
 			    String[] linea=dato.split(" "); 
 			    matrix.add(linea);
 			}
-
-			for (String [] fila : matrix) {
-			    for (String elemento : fila) {
-			        System.out.print(elemento + " ");
-			    }
-			    System.out.println(); // Salto de línea después de cada fila
+			return matrix;
 			}
 		}
-    } catch (FileNotFoundException e) {
+     catch (FileNotFoundException e) {
         System.out.println("El archivo no existe");
+        ArrayList<String []> matrix = new ArrayList<String []>(); 
+        return matrix ;
     }
-	Floyd floyd = new Floyd<>();
+	
 
-	System.out.println("TIEMPO DE RUTAS: ");
-	System.out.println("TENGA UN BUEN VIAJE, CONDUZCA CON CUIDADO");
+
 	}
 }
