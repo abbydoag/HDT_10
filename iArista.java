@@ -1,5 +1,5 @@
 public interface iArista {
-    public void Arista(String ciudadDestino, int tiempoNormal,int tiempoLluvia, int tiempoNieve, int tiempoTormenta) ;
+  
 
     public String getCiudadDestino();
 
