@@ -1,4 +1,7 @@
 Ciudad1 Ciudad2 tiempoNormal tiempoLluvia tiempoNieve tiempoTormenta
 BuenosAires SaoPaulo 10 15 20 50
-BuenosAires Lima 15 20 30 70
+BuenosAires Lima 5 12 33 34
+Lima BuenosAires 1 3 3 66
+SaoPaulo BuenosAires 10 15 20 50
 Lima Quito 10 12 15 20
+SaoPaulo Lima 15 20 30 40

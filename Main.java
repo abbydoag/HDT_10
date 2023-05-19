@@ -12,6 +12,12 @@ public class Main {
 
         HashMap<String, List<Arista>> cities=HashCreator(datos);
         ArrayList<String>nodos =  Nodos(datos);
+        Graph distancias = new Graph(nodos);
+        distancias.agregarAristas(cities);
+        distancias.floid();
+        distancias.show();
+        
+       
         
         
 		
@@ -69,10 +75,10 @@ public static HashMap<String, List<Arista>> HashCreator(ArrayList<String[]> dato
         String[] fila = datos.get(i);
         String origin =fila[0].trim();
         String destino = fila[1].trim();
-        int a = Integer.parseInt(fila[2]);
-        int a1 = Integer.parseInt(fila[3]);
-        int a2 = Integer.parseInt(fila[4]);
-        int a3 = Integer.parseInt(fila[5]);
+        int a = Integer.parseInt(fila[2].trim());
+        int a1 = Integer.parseInt(fila[3].trim());
+        int a2 = Integer.parseInt(fila[4].trim());
+        int a3 = Integer.parseInt(fila[5].trim());
 
         Arista arista = new Arista(destino,a,a1,a2,a3);
         
@@ -82,13 +88,11 @@ public static HashMap<String, List<Arista>> HashCreator(ArrayList<String[]> dato
             // Agregar el nuevo objeto a la lista
             
             lista.add(arista);
-            System.out.println("Poto2" );
             cities.put(origin, lista);
         } else {
             // Si la clave no existe, crear una nueva lista, agregar el nuevo objeto y asociarla a la clave
             List<Arista> nuevaLista = new ArrayList<>();
             nuevaLista.add(arista);
-            System.out.println("Poto1" );
             cities.put(origin, nuevaLista);
         }
 
