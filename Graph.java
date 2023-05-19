@@ -1,8 +1,13 @@
+import java.util.HashMap;
+import java.util.Collections;
+
 public class Graph implements iGraph {
 
    
     private int numVertices;
     private int[][] matrizAdy;
+    private int[][] Z;
+    private HashMap<Integer,String> map;
 
     public void Grafo(int numVertices) {
         this.numVertices = numVertices;
